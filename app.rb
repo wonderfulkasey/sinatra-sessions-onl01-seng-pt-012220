@@ -41,7 +41,7 @@ session["foo"] = "hello"
 
   get '/set_session' do
 session_id => "1"
-  @session = session 
+  @session = session
     #set session id here
 
     if session[:id] == 1
