@@ -40,6 +40,7 @@ session["foo"] = "hello"
   end
 
   get '/set_session' do
+    @session = {"session_id"=> "1"}
     #set session id here
 
     if session[:id] == 1
