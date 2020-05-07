@@ -40,9 +40,9 @@ session["foo"] = "hello"
   end
 
   get '/set_session' do
-      session[:user_id] = 1
+      session[:id] = 1
       #set session id here
-      if session[:user_id] == 1
+      if session[:id] == 1
         # "Session ID set. It's currently set to #{session[:user_id]}."
         redirect '/fetch_session_id'
       else
@@ -51,7 +51,7 @@ session["foo"] = "hello"
     end
 
     get '/fetch_session_id' do
-      "You did it! session[:user_id] value: #{session[:user_id]}.\nNow, clear the session in the '/logout' route.\nSee the readme for further instructions.\nThen, navigate to the '/logout' path."
+      "You did it! session[:id] value: #{session[:id]}.\nNow, clear the session in the '/logout' route.\nSee the readme for further instructions.\nThen, navigate to the '/logout' path."
     end
 
     get '/logout' do
