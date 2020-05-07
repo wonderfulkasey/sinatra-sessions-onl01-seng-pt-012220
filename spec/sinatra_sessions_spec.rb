@@ -57,8 +57,8 @@ describe 'App' do
     end
   end
 
-  describe "GET '/logout'" do 
-    it "clear the session hash" do 
+  describe "GET '/logout'" do
+    it "clear the session hash" do
       get '/logout'
       expect(last_response.body).to include("session content: {}")
     end

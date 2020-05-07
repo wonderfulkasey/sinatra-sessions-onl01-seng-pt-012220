@@ -36,6 +36,7 @@ class App < Sinatra::Base
   end
 
   get '/set_session' do
+    session[:user_id] = 1
     #set session id here
 
     if session[:id] == 1
@@ -51,6 +52,7 @@ class App < Sinatra::Base
   end
 
   get '/logout' do
+    session = {}
     #clear session hash here
     "Session has now been cleared. session content: #{session.inspect}. Continue on to the '/finish' line!"
   end
